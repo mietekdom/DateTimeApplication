@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace DateTimeApplication
 {
@@ -7,7 +8,8 @@ namespace DateTimeApplication
         static void Main(string[] args)
         {
             //DateTimeModification();
-            DateTimeFormatting();
+            //DateTimeFormatting();
+            TimeMeasurement();
         }
 
         static void DateTimeModification()
@@ -32,6 +34,29 @@ namespace DateTimeApplication
             Console.WriteLine(now.ToString("g"));
             Console.WriteLine(now.ToString("G"));
             Console.WriteLine(now.ToString("yyyy-MM-dd")); //
+        }
+        static void TimeMeasurement()
+        {
+            Console.WriteLine("What is 2+2?");
+            Console.WriteLine("A - 2");
+            Console.WriteLine("B - 4");
+            Console.WriteLine("C - 6");
+
+            DateTime start = DateTime.Now;
+
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            
+            string userAnswer = Console.ReadLine();
+
+            stopwatch.Stop();
+
+            
+
+            DateTime end = DateTime.Now;
+
+            TimeSpan responseTime = end - start;
+
+            Console.WriteLine($"Response took you {stopwatch.Elapsed.TotalSeconds} secound");
         }
     }
 }
