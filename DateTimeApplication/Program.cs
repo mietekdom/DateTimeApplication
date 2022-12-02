@@ -10,7 +10,17 @@ namespace DateTimeApplication
             //DateTimeModification();
             //DateTimeFormatting();
             //TimeMeasurement();
-            DateTimeHelpers();
+            //DateTimeHelpers();
+
+            DateTime now = DateTime.Now;
+
+            DateTime before = now.Subtract(new TimeSpan(7, 0, 0, 0));
+
+            DateTime after = now.AddDays(7);
+
+            bool isDateBetween = Utils.IsDateBetween(now, before, after);
+
+            bool isDateBetween2 = now.IsBetween(before, after);
         }
 
         static void DateTimeModification()
@@ -60,7 +70,7 @@ namespace DateTimeApplication
             Console.WriteLine($"Response took you {stopwatch.Elapsed.TotalSeconds} secound");
         }
 
-        static void DateTimeHelpers()
+        static void DateTimeHelpers() //check how many days we have in February
         {
             int daysInFeb2022 = DateTime.DaysInMonth(2022, 2);
             int daysInFeb2023 = DateTime.DaysInMonth(2023, 2);
