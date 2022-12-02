@@ -9,7 +9,8 @@ namespace DateTimeApplication
         {
             //DateTimeModification();
             //DateTimeFormatting();
-            TimeMeasurement();
+            //TimeMeasurement();
+            DateTimeHelpers();
         }
 
         static void DateTimeModification()
@@ -57,6 +58,15 @@ namespace DateTimeApplication
             TimeSpan responseTime = end - start;
 
             Console.WriteLine($"Response took you {stopwatch.Elapsed.TotalSeconds} secound");
+        }
+
+        static void DateTimeHelpers()
+        {
+            int daysInFeb2022 = DateTime.DaysInMonth(2022, 2);
+            int daysInFeb2023 = DateTime.DaysInMonth(2023, 2);
+            int daysInFeb2024 = DateTime.DaysInMonth(2024, 2);
+
+            Console.WriteLine($"days in Feb 2022: {daysInFeb2022}, days in Feb 2023 {daysInFeb2023}, days in Feb 2024 {daysInFeb2024}");
         }
     }
 }
