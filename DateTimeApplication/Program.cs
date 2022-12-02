@@ -60,7 +60,7 @@ namespace DateTimeApplication
             Console.WriteLine($"Response took you {stopwatch.Elapsed.TotalSeconds} secound");
         }
 
-        static void DateTimeHelpers()
+        static void DateTimeHelpers() //check how many days we have in February
         {
             int daysInFeb2022 = DateTime.DaysInMonth(2022, 2);
             int daysInFeb2023 = DateTime.DaysInMonth(2023, 2);
