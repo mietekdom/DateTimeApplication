@@ -61,8 +61,6 @@ namespace DateTimeApplication
 
             stopwatch.Stop();
 
-            
-
             DateTime end = DateTime.Now;
 
             TimeSpan responseTime = end - start;
