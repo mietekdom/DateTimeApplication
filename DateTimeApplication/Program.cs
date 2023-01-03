@@ -7,10 +7,10 @@ namespace DateTimeApplication
     {
         static void Main(string[] args)
         {
-            //DateTimeModification();
-            //DateTimeFormatting();
-            //TimeMeasurement();
-            //DateTimeHelpers();
+            DateTimeModification();
+            DateTimeFormatting();
+            TimeMeasurement();
+            DateTimeHelpers();
 
             DateTime now = DateTime.Now;
 
